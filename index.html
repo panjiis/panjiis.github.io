@@ -22,120 +22,158 @@
         </div>
     </header>
 
-    <main>
+    <main class="content-list">
 
-        <section id="hero">
-            <div class="hero-container">
-                <h1>Halo, Saya [Nama Lengkap Anda]</h1>
-                <p class="tagline">Full-Stack Developer | UI/UX Enthusiast</p>
-                <p class="intro">Saya bersemangat dalam menciptakan aplikasi web yang fungsional dan ramah pengguna.</p>
-                <a href="#projects" class="cta-button">Lihat Karya Saya</a>
-            </div>
-        </section>
-
-        <section id="about">
-            <div class="container">
-                <h2>Tentang Saya</h2>
-                <p>
-                    Tulis paragraf perkenalan diri Anda di sini...
-                </p>
-            </div>
-        </section>
-
-        <section id="projects">
-            <div class="container">
-                <h2>Proyek Saya</h2>
-                <div class="projects-grid">
-                    
-                    <article class="project-card">
-                        <img src="https://via.placeholder.com/400x250.png?text=Gambar+Proyek+VR" alt="Screenshot Game VR Isle of Balance">
-                        <h3>Game VR Isle of Balance</h3>
-                        <p>
-                            Sebuah game Virtual Reality yang menantang pemain untuk menjaga keseimbangan pulau dengan menyelesaikan puzzle berbasis fisika. Saya bertanggung jawab pada desain level dan implementasi interaksi utama.
-                        </p>
-                        <div class="project-tech-stack">
-                            <span>Unity</span>
-                            <span>C#</span>
-                            <span>SteamVR</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="#" target="_blank">Live Demo</a>
-                            <a href="#" target="_blank">Source Code</a>
-                        </div>
-                    </article>
-
-                    <article class="project-card">
-                        <img src="https://via.placeholder.com/400x250.png?text=Gambar+Web+Jurnal" alt="Screenshot Website Jurnal Bumil">
-                        <h3>Website Jurnal Bumil</h3>
-                        <p>
-                           Platform web untuk membantu ibu hamil memantau perkembangan janin dan kesehatan. Berperan sebagai Project Manager untuk mengatur alur kerja tim dan Quality Assurance untuk memastikan produk bebas dari bug.
-                        </p>
-                        <div class="project-tech-stack">
-                            <span>Laravel</span>
-                            <span>MySQL</span>
-                            <span>Bootstrap</span>
-                            <span>Jira</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="#" target="_blank">Live Demo</a>
-                            <a href="#" target="_blank">Source Code</a>
-                        </div>
-                    </article>
-
-                    <article class="project-card">
-                        <img src="https://via.placeholder.com/400x250.png?text=Gambar+Aplikasi+Toko" alt="Screenshot Aplikasi Toko Online">
-                        <h3>Aplikasi E-commerce "TokoAsik"</h3>
-                        <p>
-                           Membangun aplikasi e-commerce dari nol dengan fitur keranjang belanja, pembayaran online, dan dasbor admin untuk mengelola produk. Fokus pada performa dan keamanan.
-                        </p>
-                        <div class="project-tech-stack">
-                            <span>React</span>
-                            <span>Node.js</span>
-                            <span>MongoDB</span>
-                            <span>Stripe API</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="#" target="_blank">Live Demo</a>
-                            <a href="#" target="_blank">Source Code</a>
-                        </div>
-                    </article>
-
+        <div class="animated-card">
+            <section id="hero">
+                <div class="hero-container">
+                    <h1>Halo, Saya [Nama Lengkap Anda]</h1>
+                    <p class="tagline">Full-Stack Developer | UI/UX Enthusiast</p>
+                    <p class="intro">Saya bersemangat dalam menciptakan aplikasi web yang fungsional dan ramah pengguna.</p>
+                    <a href="#projects" class="cta-button">Lihat Karya Saya</a>
                 </div>
-            </div>
-        </section>
+            </section>
+        </div>
 
-        <section id="skills">
-            <div class="container">
-                <h2>Keterampilan & Teknologi</h2>
-                <ul class="skills-list">
-                    <li>HTML5</li>
-                    <li>CSS3 & Sass</li>
-                    <li>JavaScript (ES6+)</li>
-                    <li>React.js</li>
-                    <li>Node.js</li>
-                    <li>Python</li>
-                    <li>Git & GitHub</li>
-                    <li>Figma</li>
-                    <li>REST API</li>
-                </ul>
-            </div>
-        </section>
+        <div class="animated-card" id="about">
+             <section>
+                <div class="container">
+                    <h2>Tentang Saya</h2>
+                    <p>Tulis paragraf perkenalan diri Anda di sini...</p>
+                </div>
+            </section>
+        </div>
+
+        <div class="animated-card" id="projects">
+            <section>
+                <div class="container">
+                    <h2>Proyek Saya</h2>
+                </div>
+                
+                <div class="project-carousel">
+                    <div class="carousel-track">
+
+                        <div class="project-card is-spacer"></div>
+                        
+                        <article class="project-card">
+                            <img src="https://via.placeholder.com/400x250.png?text=Gambar+Proyek+VR" alt="Screenshot Game VR Isle of Balance">
+                            <h3>Game VR Isle of Balance</h3>
+                            <p>Sebuah game Virtual Reality yang menantang pemain untuk menjaga keseimbangan pulau dengan menyelesaikan puzzle berbasis fisika.</p>
+                            <div class="project-tech-stack"><span>Unity</span><span>C#</span></div>
+                            <div class="project-links"><a href="#" target="_blank">Live Demo</a><a href="#" target="_blank">Source Code</a></div>
+                        </article>
+
+                        <article class="project-card">
+                            <img src="https://via.placeholder.com/400x250.png?text=Gambar+Web+Jurnal" alt="Screenshot Website Jurnal Bumil">
+                            <h3>Website Jurnal Bumil</h3>
+                            <p>Platform web untuk membantu ibu hamil memantau perkembangan janin dan kesehatan.</p>
+                            <div class="project-tech-stack"><span>Laravel</span><span>MySQL</span></div>
+                            <div class="project-links"><a href="#" target="_blank">Live Demo</a><a href="#" target="_blank">Source Code</a></div>
+                        </article>
+
+                        <article class="project-card">
+                            <img src="https://via.placeholder.com/400x250.png?text=Gambar+Aplikasi+Toko" alt="Screenshot Aplikasi Toko Online">
+                            <h3>Aplikasi E-commerce "TokoAsik"</h3>
+                            <p>Membangun aplikasi e-commerce dari nol dengan fitur keranjang belanja, pembayaran online, dan dasbor admin.</p>
+                            <div class="project-tech-stack"><span>React</span><span>Node.js</span></div>
+                            <div class="project-links"><a href="#" target="_blank">Live Demo</a><a href="#" target="_blank">Source Code</a></div>
+                        </article>
+                        <div class="project-card is-spacer"></div>
+
+                        </div>
+
+                    <button class="carousel-nav prev" aria-label="Proyek Sebelumnya">&lt;</button>
+                    <button class="carousel-nav next" aria-label="Proyek Berikutnya">&gt;</button>
+                </div>
+            </section>
+        </div>
+
+        <div class="animated-card" id="experience">
+            <section>
+                <div class="container">
+                    <h2>Pengalaman & Dokumentasi</h2>
+                    <div class="experience-layout">
+                        
+                        <div class="experience-visual">
+                            <div class="static-folder-container">
+                                <div class="static-folder">
+                                    <div class="folder-back">
+                                        
+                                        <div class="paper">
+                                            <h4>Software Engineer</h4>
+                                            <p><strong>Tech Corp Indonesia</strong> | Agu 2023 - Sekarang</p>
+                                            <ul>
+                                                <li>Mengembangkan fitur-fitur utama menggunakan React dan Node.js.</li>
+                                                <li>Berkolaborasi dengan tim UI/UX.</li>
+                                            </ul>
+                                        </div>
+
+                                        <div class="paper">
+                                            <h4>Dokumentasi: TokoAsik</h4>
+                                            <p><strong>Studi Kasus E-commerce</strong></p>
+                                            <p>Dokumentasi teknis, tantangan, dan solusi pada proyek "TokoAsik".</p>
+                                            <a href="#" class="paper-link">Lihat Dokumen</a>
+                                        </div>
+
+                                        <div class="paper">
+                                            <h4>Sertifikat Profesional</h4>
+                                            <p><strong>Cloud Practitioner</strong> | AWS</p>
+                                            <p>Memvalidasi pemahaman fundamental mengenai layanan cloud AWS.</p>
+                                            <a href="#" class="paper-link">Verifikasi</a>
+                                        </div>
+
+                                        <div class="folder-front"></div>
+                                        <div class="folder-front right"></div>
+                                    </div>
+                                    </div>
+                                <p class="click-instruction">Klik folder untuk membuka</p>
+                            </div>
+                        </div>
+
+                        <div class="experience-text">
+                            <h3>Koleksi Dokumen</h3>
+                            <h4>Pengalaman, Studi Kasus, & Sertifikasi</h4>
+                            <p>
+                                Bagian ini berisi kumpulan dokumen profesional saya. Silakan klik folder di samping untuk melihat semuanya secara bersamaan.
+                            </p>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <div class="animated-card" id="skills">
+            <section>
+                <div class="container">
+                    <h2>Keterampilan & Teknologi</h2>
+                    <ul class="skills-list">
+                        <li>HTML5</li>
+                        <li>CSS3 & Sass</li>
+                        </ul>
+                </div>
+            </section>
+        </div>
 
     </main>
 
-    <footer id="contact">
-        <div class="container">
-            <h2>Hubungi Saya</h2>
-            <p>Saya selalu terbuka untuk diskusi mengenai proyek baru atau peluang kolaborasi.</p>
-            <a href="mailto:email.anda@example.com" class="email-link">email.anda@example.com</a>
-            <div class="social-links">
-                <a href="#" target="_blank">LinkedIn</a>
-                <a href="#" target="_blank">GitHub</a>
-                <a href="#" target="_blank">Twitter</a>
+    <div class="animated-card" id="contact">
+        <footer>
+            <div class="container">
+                <h2>Hubungi Saya</h2>
+                <p>Saya selalu terbuka untuk diskusi mengenai proyek baru atau peluang kolaborasi.</p>
+                <a href="mailto:email.anda@example.com" class="email-link">email.anda@example.com</a>
+                <div class="social-links">
+                    <a href="#" target="_blank">LinkedIn</a>
+                    <a href="#" target="_blank">GitHub</a>
+                    <a href="#" target="_blank">Twitter</a>
+                </div>
+                <p class="copyright">&copy; 2025 - Nama Anda. Dibuat dengan ❤️.</p>
             </div>
-            <p class="copyright">&copy; 2025 - Nama Anda. Dibuat dengan ❤️.</p>
-        </div>
-    </footer>
+        </footer>
+    </div>
+
+    <script src="script.js" defer></script>
 
 </body>
 </html>
