@@ -209,9 +209,7 @@ section h2 {
     margin-right: 15px;
 }
 
-#skills {
-    
-}
+
 
 .skills-list {
     list-style: none;
@@ -521,9 +519,7 @@ footer a {
 /* --- Penyesuaian untuk Kartu Keterampilan --- */
 
 /* Memberi nama unik untuk carousel keterampilan jika diperlukan */
-.skills-carousel {
-    /* Bisa ditambahkan gaya khusus di sini jika perlu */
-}
+
 
 .skill-card {
     text-align: center; /* Membuat konten kartu skill menjadi rata tengah */
