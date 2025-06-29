@@ -114,8 +114,5 @@ document.addEventListener('DOMContentLoaded', () => {
     initializeCarousel('.project-carousel');
     initializeCarousel('.skills-carousel');
 
-<<<<<<< HEAD
+
 });
-=======
-});
->>>>>>> 7b6e88a38cc4add7639acad4e1b6474cf9d3e37e
