@@ -170,17 +170,42 @@ footer a {
 }
 
 #hero {
-    text-align: left;
+text-align: left;
+min-height: 10vh;
+display: flex; 
+flex-direction: column; 
+justify-content: center; 
+align-items: flex-start; 
+padding-top: 20;
+padding-bottom: 20; 
 }
 
 #hero .hero-container {
-    display: flex;
-    align-items: center;
-    gap: 50px;
+display: flex;
+align-items: center; 
+height: calc(100vh - 70px - 60px);
+gap: 50px;
 }
 
 .hero-text {
     flex: 2;
+}
+
+.hero-text h1 {
+font-size: 3rem; 
+margin-bottom: 15px;
+}
+.hero-text .tagline {
+font-size: 1.5rem; 
+color: var(--subtle-text-color);
+margin-bottom: 20px;
+}
+
+.hero-text .intro {
+font-size: 1rem; 
+color: var(--subtle-text-color);
+line-height: 1.5;
+margin-bottom: 25px;
 }
 
 .hero-image {
@@ -409,4 +434,9 @@ footer a {
     .experience-layout {
         grid-template-columns: 1fr;
     }
+}
+
+#contact.animated-card {
+    max-width: none;
+    padding: 0;      
 }
