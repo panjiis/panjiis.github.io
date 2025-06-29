@@ -1,15 +1,11 @@
-/* style.css - DARK MODE THEME (Hitam & Merah) */
-
-/* === RESET DASAR & VARIABEL WARNA BARU === */
-/* Ganti blok :root yang lama dengan yang ini */
 :root {
-    --primary-color: #3B82F6;       /* Biru Modern (Aksen Utama) */
-    --hover-color: #2563EB;        /* Biru lebih gelap untuk hover */
-    --background-color: #121212;  /* Hitam (Background Utama) */
-    --card-background: #1E1E1E;    /* Abu-abu Sangat Gelap (Untuk Kartu/Section) */
-    --border-color: #2e2e2e;       /* Warna border yang subtle */
-    --text-color: #F4F4F4;          /* Putih Pucat (Teks Utama) */
-    --subtle-text-color: #aaa;      /* Abu-abu Terang (Teks Sekunder) */
+    --primary-color: #3B82F6;
+    --hover-color: #2563EB;
+    --background-color: #121212;
+    --card-background: #1E1E1E;
+    --border-color: #2e2e2e;
+    --text-color: #F4F4F4;
+    --subtle-text-color: #aaa;
 }
 
 * {
@@ -18,15 +14,8 @@
     padding: 0;
 }
 
-/* Tambahkan atau edit ini di file style.css Anda */
-
 html {
-    /* Bonus: membuat semua scroll menjadi halus secara default */
     scroll-behavior: smooth;
-
-    /* INI BAGIAN PENTINGNYA */
-    /* Beri tahu browser untuk selalu berhenti 85px DI ATAS target */
-    /* 70px untuk tinggi header + 15px untuk jarak tambahan */
     scroll-padding-top: 85px; 
 }
 
@@ -35,13 +24,11 @@ body {
     line-height: 1.6;
     background-color: var(--background-color);
     color: var(--text-color);
-    scroll-padding-top: 80px; 
 }
 
-/* === PENGATURAN HEADER STICKY === */
 header {
-    background-color: rgba(30, 30, 30, 0.85); /* Warna header sedikit transparan */
-    backdrop-filter: blur(10px); /* Efek glassmorphism */
+    background-color: rgba(30, 30, 30, 0.85);
+    backdrop-filter: blur(10px);
     border-bottom: 1px solid var(--border-color);
     position: sticky;
     top: 0;
@@ -50,7 +37,6 @@ header {
     transition: background-color 0.3s ease;
 }
 
-/* === LAYOUT HEADER DENGAN FLEXBOX === */
 .header-container {
     max-width: 1100px;
     margin: 0 auto;
@@ -64,10 +50,9 @@ header {
 .logo {
     font-size: 1.5rem;
     font-weight: bold;
-    color: var(--primary-color); /* Logo menggunakan warna aksen merah */
+    color: var(--primary-color);
 }
 
-/* === PENGATURAN POSISI TOMBOL NAVIGASI === */
 nav ul {
     display: flex;
     list-style: none;
@@ -91,8 +76,6 @@ nav ul li a:hover {
     color: #fff;
 }
 
-
-/* === STYLE UMUM UNTUK KONTEN === */
 .container {
     max-width: 1100px;
     margin: 0 auto;
@@ -101,34 +84,16 @@ nav ul li a:hover {
 
 section {
     padding: 60px 0;
-    border-bottom: 1px solid var(--border-color);
 }
+
 section:last-of-type {
     border-bottom: none;
 }
 
 section h2 {
     text-align: center;
-    margin-bottom: 0px;
+    margin-bottom: 20px;
     font-size: 2.5rem;
-    color: var(--text-color);
-}
-
-#hero {
-    text-align: center;
-    padding: 80px 0;
-    background-color: var(--background-color); /* Hero sama dengan background utama */
-}
-
-#hero h1 {
-    color: #fff; /* Teks judul utama lebih terang */
-    font-size: 3rem;
-}
-
-#hero .tagline {
-    color: var(--primary-color);
-    font-size: 1.2rem;
-    font-weight: 500;
 }
 
 .cta-button {
@@ -147,30 +112,218 @@ section h2 {
     background-color: var(--hover-color);
 }
 
-.projects-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
+footer {
+    background-color: var(--background-color);
+    color: #fff;
+    text-align: center;
+    padding: 40px 20px;
+    border-top: 1px solid var(--border-color);
+}
+
+footer a {
+    color: var(--primary-color);
+}
+
+.social-links {
+    margin: 20px 0;
+}
+
+.social-links a {
+    margin: 0 10px;
+    color: var(--text-color);
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+    color: var(--primary-color);
+}
+
+.content-list {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+.animated-card {
+    max-width: 1100px;
+    margin: 0 auto 5rem auto;
+    padding: 0 20px;
+    opacity: 0;
+    transform: scale(0.9);
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+.animated-card.is-visible {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.animated-card section {
+    border: none;
+    padding: 0;
+}
+
+.animated-card footer {
+    border-top: none;
+    padding-top: 0;
+}
+
+#hero {
+text-align: left;
+min-height: 10vh;
+display: flex; 
+flex-direction: column; 
+justify-content: center; 
+align-items: flex-start; 
+padding-top: 20;
+padding-bottom: 20; 
+}
+
+#hero .hero-container {
+display: flex;
+align-items: center; 
+height: calc(100vh - 70px - 60px);
+gap: 50px;
+}
+
+.hero-text {
+    flex: 2;
+}
+
+.hero-text h1 {
+font-size: 3rem; 
+margin-bottom: 15px;
+}
+.hero-text .tagline {
+font-size: 1.5rem; 
+color: var(--subtle-text-color);
+margin-bottom: 20px;
+}
+
+.hero-text .intro {
+font-size: 1rem; 
+color: var(--subtle-text-color);
+line-height: 1.5;
+margin-bottom: 25px;
+}
+
+.hero-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-image img {
+    width: 100%;
+    max-width: 300px;
+    aspect-ratio: 1 / 1;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid var(--primary-color);
+    box-shadow: 0 5px 25px rgba(0,0,0,0.4);
+}
+
+.project-carousel {
+    position: relative;
+    width: 100%;
+    height: 600px;
+    padding-top: 0;
+    padding-bottom: 20px;
+    overflow: hidden;
+}
+
+.carousel-track {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    align-items: center;
+    height: 100%;
+    transition: transform 0.5s cubic-bezier(0.25, 1, 0.5, 1);
 }
 
 .project-card {
+    width: 350px;
+    margin: 0 20px;
+    flex-shrink: 0;
+    cursor: pointer;
     background: var(--card-background);
     border: 1px solid var(--border-color);
     border-radius: 8px;
     overflow: hidden;
-    transition: transform 0.3s ease, border-color 0.3s ease;
+    transition: all 0.5s cubic-bezier(0.25, 1, 0.5, 1);
 }
 
-.project-card:hover {
-    transform: translateY(-5px);
+.carousel-track .project-card {
+    transform: scale(0.8);
+    filter: blur(4px);
+    opacity: 0.5;
+    z-index: 1;
+}
+
+.carousel-track .project-card.is-active {
+    transform: scale(1.15);
+    filter: blur(0);
+    opacity: 1;
+    z-index: 10;
     border-color: var(--primary-color);
 }
 
-.project-card img {
+.project-card.is-spacer {
+    visibility: hidden;
+    pointer-events: none;
+    border: none;
+    background: transparent;
+}
+
+.carousel-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 20;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    font-size: 2rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.carousel-nav:hover {
+    background-color: var(--primary-color);
+}
+
+.carousel-nav.prev {
+    left: 20px;
+}
+
+.carousel-nav.next {
+    right: 20px;
+}
+
+.carousel-nav.is-hidden {
+    display: none;
+}
+
+.card-image-container {
     width: 100%;
-    height: auto;
-    display: block;
-    opacity: 0.9;
+    aspect-ratio: 16 / 9;
+    background-color: #000000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.card-image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; 
 }
 
 .project-card h3 {
@@ -209,393 +362,81 @@ section h2 {
     margin-right: 15px;
 }
 
-
-
-.skills-list {
-    list-style: none;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 15px;
-}
-
-.skills-list li {
-    background-color: #2c2c2c;
-    color: var(--text-color);
-    padding: 10px 20px;
-    border-radius: 5px;
-    font-weight: 500;
-}
-
-footer {
-    background-color: var(--background-color);
-    color: #fff;
-    text-align: center;
-    padding: 40px 20px;
-    border-top: 1px solid var(--border-color);
-}
-
-footer a {
-    color: var(--primary-color);
-}
-
-.social-links {
-    margin: 20px 0;
-}
-
-.social-links a {
-    margin: 0 10px;
-    color: var(--text-color);
-    text-decoration: none;
-    font-size: 1.2rem;
-    transition: color 0.3s ease;
-}
-
-.social-links a:hover {
-    color: var(--primary-color);
-}
-
-/* Tambahkan kode ini di bagian paling bawah style.css */
-
-/* Wadah untuk daftar konten kita */
-.content-list {
-    padding-top: 2rem;
-    padding-bottom: 2rem;
-}
-
-/* Ini adalah kartu yang akan kita animasikan */
-.animated-card {
-    max-width: 1100px; /* Samakan dengan .container */
-    margin: 0 auto 5rem auto; /* Memberi jarak bawah antar kartu */
-    padding: 0 20px;
-
-    /* KONDISI AWAL ANIMASI: Transparan dan sedikit kecil */
-    opacity: 0;
-    transform: scale(0.9);
-    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
-}
-
-/* KONDISI AKHIR ANIMASI: Terlihat penuh */
-.animated-card.is-visible {
-    opacity: 1;
-    transform: scale(1);
-}
-
-/* Menghilangkan border dan padding pada section di dalam kartu, karena kartu sudah punya jarak */
-.animated-card section {
-    border: none;
-    padding: 0;
-}
-
-/* Menyesuaikan footer di dalam kartu */
-.animated-card footer {
-    border-top: none;
-    padding-top: 0;
-}
-
-/* TAMBAHKAN KODE INI DI BAGIAN PALING AKHIR style.css */
-
-/* Menghapus layout grid lama */
-.projects-grid {
-    display: block;
-}
-
-/* Wadah utama carousel */
-.project-carousel {
-    position: relative;
-    width: 100%;
-    height: 600px; /* Atur tinggi carousel */
-    padding-top: 0; /* Hapus padding atas */
-    padding-bottom: 20px; /* Pertahankan padding bawah jika perlu */
-    overflow: hidden;
-}
-
-/* Jalur yang berisi semua kartu dan bisa digeser */
-.carousel-track {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    display: flex;
-    align-items: center;
-    height: 100%;
-    /* Transisi ini untuk animasi pergeseran yang mulus */
-    transition: transform 0.5s cubic-bezier(0.25, 1, 0.5, 1);
-}
-
-/* Mengubah gaya kartu proyek untuk carousel */
-.carousel-track .project-card {
-    width: 350px; /* Atur lebar kartu */
-    margin: 0 20px;
-    flex-shrink: 0;
-    cursor: pointer;
-    /* Transisi untuk semua properti (scale, filter, opacity) */
-    transition: all 0.5s cubic-bezier(0.25, 1, 0.5, 1);
-}
-
-/* === EFEK HIGHLIGHT, BLUR, DAN TIMPA === */
-
-/* Gaya default untuk kartu di samping (tidak aktif) */
-.carousel-track .project-card {
-    transform: scale(0.8);
-    filter: blur(4px);
-    opacity: 0.5;
-    z-index: 1;
-}
-
-/* Gaya untuk kartu di tengah (aktif) */
-.carousel-track .project-card.is-active {
-    transform: scale(1.15); /* Nilai diperbesar dari 1 menjadi 1.15 (lebih besar 15%) */
-    filter: blur(0);
-    opacity: 1;
-    z-index: 10; /* z-index ini memastikan kartu menimpa yang lain */
-    border-color: var(--primary-color);
-}
-
-/* Tombol Navigasi */
-.carousel-nav {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    z-index: 20;
-    background-color: rgba(0, 0, 0, 0.5);
-    color: white;
-    border: none;
-    border-radius: 50%;
-    width: 50px;
-    height: 50px;
-    font-size: 2rem;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.carousel-nav:hover {
-    background-color: var(--primary-color);
-}
-
-.carousel-nav.prev {
-    left: 20px;
-}
-
-.carousel-nav.next {
-    right: 20px;
-}
-
-.carousel-nav.is-hidden {
-    display: none;
-}
-
-/* TAMBAHKAN KODE INI DI BAGIAN PALING AKHIR style.css */
-
-/* Membuat kartu spacer tidak terlihat dan tidak bisa diklik */
-.project-card.is-spacer {
-    visibility: hidden; /* Elemen tidak terlihat, tapi ruangnya tetap ada */
-    pointer-events: none; /* Elemen tidak bisa diklik atau di-hover */
-    border: none;
-    background: transparent;
-}
-
-
-/* TAMBAHKAN KODE INI DI BAGIAN PALING AKHIR style.css */
-
-/* --- Gaya untuk Bagian Lowongan Kerja --- */
-.job-layout {
+.experience-layout {
     display: grid;
-    grid-template-columns: 40% 1fr; /* Kolom gambar 40% */
-    gap: 40px;
-    align-items: flex-start;
-    margin-top: 40px;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.experience-item {
+    background-color: var(--card-background);
     padding: 30px;
     border-radius: 12px;
     border: 1px solid var(--border-color);
-}
-
-.job-visual {
-    width: 100%;
-    position: sticky; /* Membuat gambar tetap saat teks di kanan di-scroll */
-    top: 100px;
-}
-
-/* Slider Gambar */
-.job-slider {
-    position: relative;
-    width: 100%;
-    aspect-ratio: 16 / 10;
-    border-radius: 8px;
-    overflow: hidden;
-}
-
-.job-slider-track {
-    display: flex;
-    height: 100%;
-    transition: transform 0.5s ease-in-out;
-}
-
-.job-slide {
-    min-width: 100%;
     height: 100%;
 }
 
-.job-slide img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.job-slider-nav {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: rgba(0, 0, 0, 0.4);
-    color: white;
-    border: none;
-    border-radius: 50%;
-    width: 40px;
-    height: 40px;
-    font-size: 1.5rem;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    z-index: 10;
-}
-.job-slider-nav:hover {
-    background-color: var(--primary-color);
-}
-.job-slider-nav:disabled {
-    background-color: rgba(0, 0, 0, 0.2);
-    cursor: not-allowed;
-}
-.job-slider-nav.job-prev { left: 10px; }
-.job-slider-nav.job-next { right: 10px; }
-
-
-/* Deskripsi Pekerjaan */
-.job-description h3 {
+.experience-item h3 {
     margin-top: 0;
-    font-size: 2rem;
+    font-size: 1.5rem;
     color: var(--primary-color);
 }
-.job-description .location {
+
+.experience-item .location {
     color: var(--subtle-text-color);
+    font-size: 0.9rem;
     margin-bottom: 20px;
-}
-.job-description h4 {
-    margin-top: 30px;
-    border-bottom: 1px solid var(--border-color);
-    padding-bottom: 10px;
-    margin-bottom: 15px;
-}
-.job-description ul {
-    padding-left: 20px;
-    margin-bottom: 30px;
-}
-.apply-button {
-    background-color: var(--primary-color);
-    color: #fff;
-    border: none;
-    padding: 12px 25px;
-    border-radius: 5px;
-    cursor: pointer;
-    font-weight: bold;
-    text-decoration: none;
-    display: inline-block;
-    transition: background-color 0.3s ease;
-}
-.apply-button:hover {
-    background-color: var(--hover-color);
+    display: block;
 }
 
-/* Penyesuaian untuk layar kecil */
+.experience-item h4 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 10px;
+}
+
+.experience-item ul {
+    padding-left: 20px;
+    margin-bottom: 20px;
+}
+
+.experience-item li {
+    margin-bottom: 8px;
+}
+
+.skill-card {
+    text-align: left;
+}
+
 @media (max-width: 900px) {
     .job-layout {
-        grid-template-columns: 1fr; /* Tumpuk kolomnya */
+        grid-template-columns: 1fr;
     }
     .job-visual {
-        position: static; /* Hapus sticky di mobile */
+        position: static;
         margin-bottom: 30px;
     }
 }
 
-
-/* TAMBAHKAN KODE INI DI BAGIAN PALING AKHIR style.css */
-
-/* --- Penyesuaian untuk Kartu Keterampilan --- */
-
-/* Memberi nama unik untuk carousel keterampilan jika diperlukan */
-
-
-.skill-card {
-    text-align: center; /* Membuat konten kartu skill menjadi rata tengah */
-}
-
-.skill-icon {
-    width: 80px !important; /* !important untuk menimpa gaya .project-card img */
-    height: 80px !important;
-    object-fit: contain; /* Memastikan ikon tidak terdistorsi */
-    margin: 20px auto 10px auto;
-    display: block;
-    opacity: 1; /* Pastikan ikon tidak redup */
-}
-
-.skill-card h3 {
-    padding-top: 0;
-}
-
-.skill-card p {
-    min-height: 100px; /* Memberi tinggi minimum agar layout tidak berantakan */
-}
-
-
-/* TAMBAHKAN KODE INI DI file style.css ANDA */
-
-/* Mengatur layout utama di section hero */
-#hero .hero-container {
-    display: flex; /* Mengaktifkan layout flexbox (kiri-kanan) */
-    align-items: center; /* Membuat teks dan gambar sejajar di tengah secara vertikal */
-    gap: 50px; /* Memberi jarak antara kolom teks dan gambar */
-}
-
-/* Mengatur porsi kolom teks */
-.hero-text {
-    flex: 2; /* Membuat kolom teks mengambil porsi 2x lebih besar dari gambar */
-    text-align: left; /* Memastikan teks rata kiri */
-}
-
-/* Mengatur porsi kolom gambar */
-.hero-image {
-    flex: 1; /* Kolom gambar mengambil porsi 1x */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-/* Memberi gaya pada gambar agar bulat dan menarik */
-.hero-image img {
-    width: 100%;
-    max-width: 300px; /* Batas ukuran maksimum gambar */
-    height: auto;
-    aspect-ratio: 1 / 1; /* Memastikan bentuknya selalu 1:1 (persegi) */
-    border-radius: 50%; /* Membuat gambar menjadi bulat sempurna */
-    object-fit: cover; /* Memastikan gambar memenuhi lingkaran tanpa distorsi */
-    border: 4px solid var(--primary-color); /* Memberi bingkai dengan warna tema */
-    box-shadow: 0 5px 25px rgba(0,0,0,0.4);
-}
-
-/* Hapus rata tengah dari #hero yang mungkin sudah ada */
-#hero {
-    text-align: left; /* Ubah dari center ke left */
-}
-
-/* Aturan untuk layar kecil/mobile */
 @media (max-width: 768px) {
-    #hero .hero-container {
-        flex-direction: column-reverse; /* Tumpuk kolomnya, gambar di atas teks */
+    .hero-container {
+        flex-direction: column-reverse;
         gap: 30px;
     }
-
     .hero-text {
-        text-align: center; /* Buat teks rata tengah di mobile */
+        text-align: center;
     }
-
     .hero-image img {
-        max-width: 200px; /* Perkecil gambar di mobile */
+        max-width: 200px;
     }
+    .experience-layout {
+        grid-template-columns: 1fr;
+    }
+}
+
+#contact.animated-card {
+    max-width: none;
+    padding: 0;      
 }

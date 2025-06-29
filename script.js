@@ -1,25 +1,5 @@
-// script.js
-
-window.addEventListener('scroll', function() {
-    const header = document.querySelector('header');
-    const scrollPosition = window.scrollY;
-
-    // Jika user scroll lebih dari 50px ke bawah, tambahkan class 'scrolled' ke header
-    if (scrollPosition > 50) {
-        header.classList.add('scrolled');
-    } else {
-        // Jika kembali ke atas, hapus class 'scrolled'
-        header.classList.remove('scrolled');
-    }
-});
-
-// script.js
-
-// GANTI SELURUH ISI FILE script.js ANDA DENGAN KODE INI
-
 document.addEventListener('DOMContentLoaded', () => {
 
-    // --- Fitur 1: EFEK 'SCROLLED' PADA HEADER ---
     const header = document.querySelector('header');
     if (header) {
         window.addEventListener('scroll', () => {
@@ -31,7 +11,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // --- Fitur 2: ANIMASI MUNCUL SAAT SCROLL UNTUK SEMUA BAGIAN ---
     const animatedCards = document.querySelectorAll('.animated-card');
     if (animatedCards.length > 0) {
         const observer = new IntersectionObserver((entries) => {
@@ -46,7 +25,6 @@ document.addEventListener('DOMContentLoaded', () => {
         animatedCards.forEach(card => observer.observe(card));
     }
 
-    // --- Fitur 3: NAVIGASI HALUS (SMOOTH SCROLL) DARI HEADER ---
     const navLinks = document.querySelectorAll('header nav a');
     navLinks.forEach(link => {
         link.addEventListener('click', function (e) {
@@ -67,18 +45,16 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-
-    // === FUNGSI CAROUSEL YANG BISA DIGUNAKAN KEMBALI ===
     const initializeCarousel = (carouselSelector) => {
         const carousel = document.querySelector(carouselSelector);
-        if (!carousel) return; // Hentikan jika carousel tidak ditemukan
+        if (!carousel) return;
 
         const track = carousel.querySelector('.carousel-track');
         const cards = Array.from(track.querySelectorAll('.project-card:not(.is-spacer)'));
         const nextButton = carousel.querySelector('.carousel-nav.next');
         const prevButton = carousel.querySelector('.carousel-nav.prev');
         
-        if (cards.length === 0) return; // Hentikan jika tidak ada kartu
+        if (cards.length === 0) return;
 
         let currentIndex = 0;
 
@@ -126,7 +102,6 @@ document.addEventListener('DOMContentLoaded', () => {
             moveToCard(currentIndex - 1);
         });
         
-        // Atur posisi awal ke item pertama untuk konsistensi
         moveToCard(0);
 
         window.addEventListener('resize', () => {
@@ -136,56 +111,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     };
 
-    // === INISIALISASI KEDUA CAROUSEL SECARA TERPISAH ===
-    initializeCarousel('.project-carousel'); // Inisialisasi Carousel Proyek
-    initializeCarousel('.skills-carousel'); // Inisialisasi Carousel Keterampilan
-
-    const jobSlider = document.querySelector('.job-slider');
-
-    // Hanya jalankan kode ini jika elemen .job-slider ada di halaman
-    if (jobSlider) {
-        const track = jobSlider.querySelector('.job-slider-track');
-        const slides = Array.from(track.children);
-        const nextButton = jobSlider.querySelector('.job-next');
-        const prevButton = jobSlider.querySelector('.job-prev');
-        
-        // Hentikan jika tidak ada slide
-        if (slides.length === 0) return;
-
-        let currentIndex = 0;
-
-        // Fungsi utama untuk pindah ke slide tertentu
-        const moveToSlide = (targetIndex) => {
-            // Menggunakan persentase untuk pergeseran yang lebih responsif
-            track.style.transform = `translateX(-${targetIndex * 100}%)`;
-            currentIndex = targetIndex;
-            updateButtons();
-        };
-        
-        // Fungsi untuk mengaktifkan/menonaktifkan tombol panah
-        const updateButtons = () => {
-            prevButton.disabled = currentIndex === 0;
-            nextButton.disabled = currentIndex === slides.length - 1;
-        };
-
-        // Tambahkan event listener untuk tombol "next"
-        nextButton.addEventListener('click', () => {
-            if (currentIndex < slides.length - 1) {
-                moveToSlide(currentIndex + 1);
-            }
-        });
-
-        // Tambahkan event listener untuk tombol "previous"
-        prevButton.addEventListener('click', () => {
-            if (currentIndex > 0) {
-                moveToSlide(currentIndex - 1);
-            }
-        });
-        
-        // Atur status tombol saat pertama kali dimuat
-        updateButtons();
-    }
+    initializeCarousel('.project-carousel');
+    initializeCarousel('.skills-carousel');
 
 });
-
-   
